@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Snack Cafe</title>
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+<body>
+
+    <!-- Animación de carga -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="https://i.ibb.co/mzTKq6H/CAFE-THE-SNACK-TRANSPARENTE.png" alt="The Snack Cafe Logo">
+        </div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <header class="barra-navegacion">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="https://i.ibb.co/mzTKq6H/CAFE-THE-SNACK-TRANSPARENTE.png" alt="The Snack Cafe">
+        </div>
+        <nav class="enlaces-navegacion">
+            <a href="#" onclick="abrirModalLogin()">Pide en Línea</a>
+            <a href="menu.html">Menú</a>
+            <a href="#" onclick="abrirModalLogin()">Sigue tu Pedido</a>
+        </nav>
+        <div class="opciones-usuario">
+            <a href="#" onclick="abrirModalLogin()">
+                <span class="icono">👤</span> Iniciar Sesión
+            </a>
+            <a href="#" class="carrito">
+                <span class="icono">🛒</span> Carrito <span class="contador-carrito">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div id="modal-login" class="modal">
+        <div class="modal-contenido">
+            <div class="logo-modal">
+                <img src="https://i.ibb.co/mzTKq6H/CAFE-THE-SNACK-TRANSPARENTE.png" alt="The Snack Cafe">
+            </div>
+            <h2>Iniciar Sesión</h2>
+            <form id="form-login" onsubmit="iniciarSesion(event)">
+                <label for="loginCorreo">Correo Institucional:</label>
+                <input type="email" id="loginCorreo" placeholder="usuario@u.icesi.edu.co" required>
+                
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+                
+                <button type="submit">Iniciar Sesión</button>
+                <button type="button" class="btn-registro" onclick="abrirModalRegistro()">Registrarse</button>
+            </form>
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="modal-registro" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Registro de Usuario</h2>
+            <form id="form-registro" onsubmit="registrarUsuario(event)">
+                <label for="registroCorreo">Correo Institucional:</label>
+                <input type="email" id="registroCorreo" placeholder="Ejemplo: usuario@u.icesi.edu.co" required>
+                
+                <label for="registroCodigo">Código de Estudiante:</label>
+                <input type="text" id="registroCodigo" placeholder="Ejemplo: A12345678" required>
+                
+                <label for="registroPassword">Ingresar Contraseña:</label>
+                <input type="password" id="registroPassword" placeholder="Ingresa una contraseña" required>
+
+                <label for="registroPasswordRepeat">Repetir Contraseña:</label>
+                <input type="password" id="registroPasswordRepeat" placeholder="Repite la contraseña" required>
+                
+                <button type="submit">Registrar</button>
+                <button type="button" onclick="abrirModalLogin()">Volver a Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Seleccion-pedido -->
+    <section class="seleccion-pedido">
+        <h2>EMPIEZA TU PEDIDO</h2>
+        <button class="boton-pedido">PEDIR EN TIENDA</button>
+        <span class="separador">o</span>
+        <button class="boton-pedido">RECOGER EN TIENDA</button>
+    </section>
+
+    <!-- Sección de imágenes en la página principal -->
+
+    <section class="contenedor-galeria">
+        <div class="galeria-principal">
+            <div class="imagen-grande">
+                <img src="https://cdn.mos.cms.futurecdn.net/SVXLRzbmC783TdchFEdu6P-650-80.jpg" alt="Imagen Grande">
+            </div>
+            <div class="imagenes-pequenas">
+                <img src="https://cdn.mos.cms.futurecdn.net/SVXLRzbmC783TdchFEdu6P-650-80.jpg" alt="Imagen Pequeña 1">
+                <img src="https://cdn.mos.cms.futurecdn.net/SVXLRzbmC783TdchFEdu6P-650-80.jpg" alt="Imagen Pequeña 2">
+            </div>
+        </div>
+    </section>     
+
+    <script src="js/usuario.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

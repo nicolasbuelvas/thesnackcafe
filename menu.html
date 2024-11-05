@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - The Snack Cafe</title>
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="barra-navegacion">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="https://i.ibb.co/mzTKq6H/CAFE-THE-SNACK-TRANSPARENTE.png" alt="The Snack Cafe">
+        </div>
+        <nav class="enlaces-navegacion">
+            <a href="#" onclick="abrirModalLogin()">Pide en Línea</a>
+            <a href="index.html">Inicio</a> <!-- Cambia "Menú" por "Inicio" en esta página -->
+            <a href="#" onclick="abrirModalLogin()">Sigue tu Pedido</a>
+        </nav>
+        <div class="opciones-usuario">
+            <a href="#" onclick="abrirModalLogin()">
+                <span class="icono">👤</span> Iniciar Sesión
+            </a>
+            <a href="#" class="carrito">
+                <span class="icono">🛒</span> Carrito <span class="contador-carrito">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección de menú -->
+    <section class="menu-recomendaciones">
+        <div class="titulo-menu">
+            <h2>NUESTRAS RECOMENDACIONES</h2>
+            <p>4 INGREDIENTES</p>
+            <p>PRECIOS DISPONIBLES AL HACER EL PEDIDO</p>
+        </div>
+
+        <!-- Fila de productos (puedes duplicar esta estructura para añadir más productos o categorías) -->
+        <div class="opciones-menu">
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Hawaiian Chick">
+                <h3>Hawaiian Chick</h3>
+                <p>Queso Mozarella, trocitos de pollo, piña, tocineta y salsa BBQ.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Colombiana">
+                <h3>Colombiana</h3>
+                <p>Cebolla, maíz tierno, tocineta y chorizo.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Ranchera">
+                <h3>Ranchera</h3>
+                <p>Chorizo, tocineta, cebolla y salsa BBQ.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Cerdo BBQ">
+                <h3>Cerdo BBQ</h3>
+                <p>Cerdo, piña, tocineta y salsa BBQ.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+        </div>
+
+        <!-- Segunda fila de productos (ejemplo para añadir más productos) -->
+        <div class="opciones-menu">
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Producto 5">
+                <h3>Producto 5</h3>
+                <p>Descripción del producto 5.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Producto 6">
+                <h3>Producto 6</h3>
+                <p>Descripción del producto 6.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Producto 7">
+                <h3>Producto 7</h3>
+                <p>Descripción del producto 7.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+            <div class="opcion">
+                <img src="https://via.placeholder.com/150" alt="Producto 8">
+                <h3>Producto 8</h3>
+                <p>Descripción del producto 8.</p>
+                <button class="btn-pedir">PIDE YA</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
