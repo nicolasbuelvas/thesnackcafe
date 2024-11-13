@@ -1,5 +1,3 @@
-// registro.js
-
 function registrarUsuario(event) {
     event.preventDefault();
     const correo = document.getElementById('registroCorreo').value;
@@ -8,10 +6,12 @@ function registrarUsuario(event) {
     const passwordRepeat = document.getElementById('registroPasswordRepeat').value;
 
     if (password === passwordRepeat) {
-        // Lógica para registrar al usuario
         console.log("Registrando usuario con:", correo, codigo);
         cerrarModal();
     } else {
         alert("Las contraseñas no coinciden");
     }
 }
+
+// Asignar la función al objeto global window
+window.registrarUsuario = registrarUsuario;

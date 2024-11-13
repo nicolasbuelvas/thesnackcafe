@@ -27,6 +27,51 @@
         </div>
     </header>
 
+    <!-- Modal de Inicio de Sesión -->
+    <div id="modal-login" class="modal">
+        <div class="modal-contenido">
+            <div class="logo-modal">
+                <img src="https://i.ibb.co/mzTKq6H/CAFE-THE-SNACK-TRANSPARENTE.png" alt="The Snack Cafe">
+            </div>
+            <h2>Iniciar Sesión</h2>
+            <form id="form-login" onsubmit="iniciarSesion(event)">
+                <label for="loginCorreo">Correo Institucional:</label>
+                <input type="email" id="loginCorreo" placeholder="usuario@u.icesi.edu.co" required>
+                
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+                
+                <button type="submit">Iniciar Sesión</button>
+                <button type="button" class="btn-registro" onclick="abrirModalRegistro()">Registrarse</button>
+            </form>
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="modal-registro" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Registro de Usuario</h2>
+            <form id="form-registro" onsubmit="registrarUsuario(event)">
+                <label for="registroCorreo">Correo Institucional:</label>
+                <input type="email" id="registroCorreo" placeholder="Ejemplo: usuario@u.icesi.edu.co" required>
+                
+                <label for="registroCodigo">Código de Estudiante:</label>
+                <input type="text" id="registroCodigo" placeholder="Ejemplo: A12345678" required>
+                
+                <label for="registroPassword">Ingresar Contraseña:</label>
+                <input type="password" id="registroPassword" placeholder="Ingresa una contraseña" required>
+
+                <label for="registroPasswordRepeat">Repetir Contraseña:</label>
+                <input type="password" id="registroPasswordRepeat" placeholder="Repite la contraseña" required>
+                
+                <button type="submit">Registrar</button>
+                <button type="button" onclick="abrirModalLogin()">Volver a Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Sección de menú -->
     <section class="menu-recomendaciones">
         <div class="titulo-menu">
@@ -97,6 +142,6 @@
     <script src="js/registro.js"></script>
     <script src="js/pedido.js"></script>
     <script src="js/carrito.js"></script>
-    
+
 </body>
 </html>
